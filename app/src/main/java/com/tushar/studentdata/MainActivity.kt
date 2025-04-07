@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         binding.btnSwitch.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 isMain=false
+                binding.txt.text="Archived Data"
                 view=binding.recLayoutA.recyclerA
                 binding.recLayoutA.recyclerA.adapter = archivesAdapter
                 binding.recLayoutA.recyclerA.layoutManager = LinearLayoutManager(this)
@@ -78,9 +79,7 @@ class MainActivity : AppCompatActivity() {
                 mainAdapterCalled()
         }
         }
-        binding.btnFAB.setOnClickListener {
 
-        }
     }
     private fun swipe(view: RecyclerView){
         val swipeDel= ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(0,
@@ -175,6 +174,8 @@ class MainActivity : AppCompatActivity() {
     }
     private fun mainAdapterCalled(){
         isMain=true
+
+        binding.txt.text="Student Data"
         binding.recLayoutM.recyclerM.adapter = adapter
         binding.recLayoutM.recyclerM.layoutManager=LinearLayoutManager(this)
         view=binding.recLayoutM.recyclerM
