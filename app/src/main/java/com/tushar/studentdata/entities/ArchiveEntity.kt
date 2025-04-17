@@ -8,5 +8,6 @@ data class ArchiveEntity(
     @PrimaryKey(autoGenerate = true)
     val id:Int=0,
     val studentName : String,
-    val rollNo : String
+    val rollNo : String,
+    val img:ByteArray?
 )

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:paddingHorizontal="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/card"
+        android:padding="6dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <EditText
+            android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:hint="Student Name"
+            android:textSize="18sp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintStart_toStartOf="@id/til1"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til1">
+        <EditText
+            android:id="@+id/etRoll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:hint="Roll number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:elevation="3dp"
+        app:layout_constraintEnd_toStartOf="@id/til1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/til1"
+        app:layout_constraintBottom_toBottomOf="@id/til2">
+        <ImageView
+        android:id="@+id/imgAdd"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@android:drawable/ic_menu_gallery"/>
+    </androidx.cardview.widget.CardView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/til2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Submit"
+        android:textSize="18sp"
+        android:layout_margin="12dp"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="24dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

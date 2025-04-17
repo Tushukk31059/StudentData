@@ -8,5 +8,6 @@ data class StudentEntity(
    @PrimaryKey(autoGenerate = true)
     val id:Int=0,
     val studentName: String,
-    val rollNo: Int
+    val rollNo: Int,
+    val img:ByteArray?
 )

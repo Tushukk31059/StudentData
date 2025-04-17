@@ -21,7 +21,7 @@ class StudentRepository(
 
     suspend fun insertArchive(studentObj: StudentEntity) {
         studentDao.deleteStudentById(studentObj.id)
-        archiveDao.insertArchive(ArchiveEntity(studentName = studentObj.studentName, rollNo = studentObj.rollNo.toString()))
+        archiveDao.insertArchive(ArchiveEntity(studentName = studentObj.studentName, rollNo = studentObj.rollNo.toString(), img = studentObj.img))
     }
 
     suspend fun deleteArchive(id: Int) {
